@@ -65,7 +65,7 @@ class SmartTV extends SmartDevice implements Switchable, Connectable {
 
     @Override
     public String getDeviceDetails() {
-        return "Smart TV [" + nama + "] (ID: " + id + ") - Daya: " + daya + "W | Status: " + status + " | Koneksi: " + koneksi + " | Channel: " + channel + " | Volume: " + volume;
+        return "Smart TV [" + nama + "] (ID: " + id + ") Daya: " + daya + "W | Status: " + status + " | Koneksi: " + koneksi + " | Channel: " + channel + " | Volume: " + volume;
     }
 }
 
@@ -101,7 +101,7 @@ class SmartSpeaker extends SmartDevice implements Switchable, Connectable {
 
     @Override
     public String getDeviceDetails() {
-        return "Smart Speaker [" + nama + "] (ID: " + id + ") - Daya: " + daya + "W | Status: " + status + " | Koneksi: " + koneksi + " | Volume: " + volume;
+        return "Smart Speaker [" + nama + "] (ID: " + id + ") Daya: " + daya + "W | Status: " + status + " | Koneksi: " + koneksi + " | Volume: " + volume;
     }
 }
 
@@ -125,7 +125,7 @@ class SmartDoorLock extends SmartDevice implements Lockable {
 
     @Override
     public String getDeviceDetails() {
-        return "Smart Door Lock [" + nama + "] (ID: " + id + ") - Daya: " + daya + "W | Status: " + status+ " | PIN: ****";
+        return "Smart Door [" + nama + "] (ID: " + id + ") Daya: " + daya + "W | Status: " + status+ " | PIN: ****";
     }
 }
 
@@ -134,17 +134,17 @@ public class SmartHome {
 
         ArrayList<SmartDevice> devices = new ArrayList<>();
 
-        SmartTV tv1 = new SmartTV("TV-01","TV Living Room",120,5,20,"Off");
+        SmartTV tv1 = new SmartTV("TV-jawa","TV jawa",120,5,20,"Off");
         tv1.TurnOn();
         tv1.Connect();
         devices.add(tv1);
 
-        SmartSpeaker sp1 = new SmartSpeaker("SP-02","Echo Studio",30,15,"Off");
+        SmartSpeaker sp1 = new SmartSpeaker("SP-batam","Batam Studio",30,15,"Off");
         sp1.TurnOn();
         sp1.Connect();
         devices.add(sp1);
 
-        SmartDoorLock dl1 = new SmartDoorLock("DL-03","Pintu Utama",15,1234,"Tidak Terkunci");
+        SmartDoorLock dl1 = new SmartDoorLock("DL-medan","Pintu depan",15,7777,"Ndak kekunci");
         dl1.Lock();
         devices.add(dl1);
 
