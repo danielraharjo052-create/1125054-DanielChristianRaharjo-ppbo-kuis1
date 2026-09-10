@@ -32,9 +32,9 @@ abstract class SmartDevice {
 }
 
 class SmartTV extends SmartDevice implements Switchable, Connectable {
-    private int channel;
-    private int volume;
-    private String koneksi;
+    int channel;
+    int volume;
+    String koneksi;
 
     public SmartTV(String id, String nama, double daya, int channel, int volume, String status) {
         super(id, nama, daya, status);
@@ -70,8 +70,8 @@ class SmartTV extends SmartDevice implements Switchable, Connectable {
 }
 
 class SmartSpeaker extends SmartDevice implements Switchable, Connectable {
-    private int volume;
-    private String koneksi;
+    int volume;
+    String koneksi;
 
     public SmartSpeaker(String id, String nama, double daya, int volume, String status) {
         super(id, nama, daya, status);
@@ -106,7 +106,7 @@ class SmartSpeaker extends SmartDevice implements Switchable, Connectable {
 }
 
 class SmartDoorLock extends SmartDevice implements Lockable {
-    private int pin;
+    int pin;
 
     public SmartDoorLock(String id, String nama, double daya, int pin, String status) {
         super(id, nama, daya, status);
